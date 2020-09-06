@@ -1,30 +1,40 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class plot : MonoBehaviour
+public class HumanImage : MonoBehaviour
 
 {
+    public GameObject human;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        human = GameObject.Find("Main Camera/Canvas/Humanimage");
     }
+    void Awake()
+    {
 
+        Debug.Log("Awake called.");
+        Wii.StartSearch();
+
+
+    }
     // Update is called once per frame
     void Update()
     {
-        if (SingleBoardTest.Singleboard_Startstatus == true)
-        {
-            GetComponent<RectTransform>().anchoredPosition = new Vector2(500 + 400 *Board0.Board0_COPratio[0].x, 300 + 200 * Board0.Board0_COPratio[0].y);
-        }
-        if (Board0.Board0_Totalforce[0] < 5)
+        Wii.WakeUp();
+        Wii.StartSearch();
+       
+       
+        human.GetComponent<RectTransform>().anchoredPosition = new Vector2(500 + 400 * GenericBoard.Board_COPratio[0].x, 300 + 200 * GenericBoard.Board_COPratio[0].y);
+        Debug.Log(GenericBoard.Board_COPratio[0].x);
+        /*if (Board.Board_Totalforce[0] < 5)
         {
             SingleBoardTest.Singleboard_Startstatus = false;
         }
-        if (Board0.Board0_Totalforce[0] > 5)
+        if (Board.Board_Totalforce[0] > 5)
         {
             SingleBoardTest.Singleboard_Startstatus = true;
         }
@@ -32,6 +42,6 @@ public class plot : MonoBehaviour
         {
             GetComponent<RectTransform>().anchoredPosition = new Vector2(500 , 300);
         }
-
+        */
     }
 }

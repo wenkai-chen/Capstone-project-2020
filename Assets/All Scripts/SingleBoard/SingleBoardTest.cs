@@ -1,15 +1,16 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using TMPro;
 
-public class SingleBoardTest : MonoBehaviour
+public class SingleBoardTest : Wiiboard
 {
     public GameObject SingleBoard_COPy;
     public GameObject SingleBoard_COPx;
     public GameObject SingleBoard_COP_velocityx;
     public GameObject SingleBoard_COP_velocityy;
     public GameObject SingleBoard_COP_TotalForce;
+    public GameObject SingleBoard_Device_Number;
     // Start is called before the first frame update
     public static bool Singleboard_Startstatus;
     void Start()
@@ -20,26 +21,35 @@ public class SingleBoardTest : MonoBehaviour
         SingleBoard_COP_velocityx = GameObject.Find("Main Camera/Canvas/Data and Text/Data/VelocityXdata");
         SingleBoard_COP_velocityy = GameObject.Find("Main Camera/Canvas/Data and Text/Data/VelocityYdata");
         SingleBoard_COP_TotalForce = GameObject.Find("Main Camera/Canvas/Data and Text/Data/ForceData");
+        SingleBoard_Device_Number= GameObject.Find("Main Camera/Canvas/Data and Text/Data/DeviceNumberData");
     }
-
-    // Update is called once per frame
-    void Update()
+    void Awake()
     {
-        if (Singleboard_Startstatus == true)
+
+        Debug.Log("Awake called.");
+        Wii.StartSearch();
+
+    }
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+        SingleBoard_Device_Number.GetComponent<TMP_Text>().text = GenericBoard.DeviceNumbers.ToString();
+
+        if (WhetherStart == true)
         {
-            SingleBoard_COPy.GetComponent<TMP_Text>().text = Board0.Board0_COP[0].y.ToString("0.00");
-            SingleBoard_COPx.GetComponent<TMP_Text>().text = Board0.Board0_COP[0].x.ToString("0.00");
-            SingleBoard_COP_velocityx.GetComponent<TMP_Text>().text = Board0.Velocity[0].x.ToString("0.00");
-            SingleBoard_COP_velocityy.GetComponent<TMP_Text>().text = Board0.Velocity[0].y.ToString("0.00");
-            SingleBoard_COP_TotalForce.GetComponent<TMP_Text>().text = Board0.Board0_Totalforce[0].ToString("0.00");
+            SingleBoard_COPy.GetComponent<TMP_Text>().text = GenericBoard.Board_COP[0].y.ToString("0.00");
+            SingleBoard_COPx.GetComponent<TMP_Text>().text = GenericBoard.Board_COP[0].x.ToString("0.00");
+            SingleBoard_COP_velocityx.GetComponent<TMP_Text>().text = GenericBoard.Velocity[0].x.ToString("0.00");
+            SingleBoard_COP_velocityy.GetComponent<TMP_Text>().text = GenericBoard.Velocity[0].y.ToString("0.00");
+            SingleBoard_COP_TotalForce.GetComponent<TMP_Text>().text = GenericBoard.Board_Totalforce[0].ToString("0.00");
         }
-        else if (Singleboard_Startstatus == false)
+        else if (WhetherStart == false)
         {
-            SingleBoard_COPy.GetComponent<TMP_Text>().text = 999.ToString("0.00");
-            SingleBoard_COPx.GetComponent<TMP_Text>().text = 999.ToString("0.00");
-            SingleBoard_COP_velocityx.GetComponent<TMP_Text>().text = 999.ToString("0.000");
-            SingleBoard_COP_velocityy.GetComponent<TMP_Text>().text = 999.ToString("0.000");
-            SingleBoard_COP_TotalForce.GetComponent<TMP_Text>().text = 999.ToString("0.000");
+            SingleBoard_COPy.GetComponent<TMP_Text>().text = 999.ToString("0.0");
+            SingleBoard_COPx.GetComponent<TMP_Text>().text = 999.ToString("0.0");
+            SingleBoard_COP_velocityx.GetComponent<TMP_Text>().text = 999.ToString("0.0");
+            SingleBoard_COP_velocityy.GetComponent<TMP_Text>().text = 999.ToString("0.0");
+            SingleBoard_COP_TotalForce.GetComponent<TMP_Text>().text = 999.ToString("0.0");
         }
         
     }

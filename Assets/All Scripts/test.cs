@@ -35,7 +35,7 @@ public  class test : MonoBehaviour
     public static float copy;
     public static float copx2;
     public static float copy2;
-    public static bool whetherstart = false;
+  
 
     public static class CSVManager
     {
@@ -118,12 +118,7 @@ public  class test : MonoBehaviour
             return System.DateTime.Now.ToString();
         }
     }
-    public static void calibration()
-    {
-        Wii.WakeUp();
-        tempforce1 = Wii.GetBalanceBoard(0);
-        tempforce2 = Wii.GetBalanceBoard(1);
-    }
+    
     void Awake()
     {
         

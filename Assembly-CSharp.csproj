@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{79D5E238-96A0-63E2-9E66-B07D6C247EDD}</ProjectGuid>
+    <ProjectGuid>{CB1146D9-4E1F-C316-ECEF-053464218709}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -63,21 +63,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\All Scripts\BoardSizeSetting.cs" />
+    <Compile Include="Assets\All Scripts\doubleboard\DoubleBoardTest.cs" />
     <Compile Include="Assets\All Scripts\doubleboard\Plot_2.cs" />
+    <Compile Include="Assets\All Scripts\GeneralBoard.cs" />
     <Compile Include="Assets\All Scripts\Scene Loading\MainMenu.cs" />
     <Compile Include="Assets\All Scripts\Scene Loading\SavingMenu.cs" />
     <Compile Include="Assets\All Scripts\Scene Loading\StandingSettingMenu.cs" />
     <Compile Include="Assets\All Scripts\Scene Loading\Startbutton.cs" />
     <Compile Include="Assets\All Scripts\Scene Loading\SteppingSettingMenu.cs" />
     <Compile Include="Assets\All Scripts\Scene Loading\WeightshiftSettingMenu.cs" />
-    <Compile Include="Assets\All Scripts\SingleBoard\ForceData.cs" />
-    <Compile Include="Assets\All Scripts\SingleBoard\plot.cs" />
+    <Compile Include="Assets\All Scripts\SingleBoard\Documentation\documents.cs" />
+    <Compile Include="Assets\All Scripts\SingleBoard\Plot.cs" />
     <Compile Include="Assets\All Scripts\SingleBoard\SingleBoardTest.cs" />
-    <Compile Include="Assets\All Scripts\SingleBoard\VelocityYdata.cs" />
     <Compile Include="Assets\All Scripts\test.cs" />
-    <Compile Include="Assets\Board0.cs" />
     <Compile Include="Assets\Demo Scene\DemoScene.cs" />
-    <Compile Include="Assets\Documentation\documents.cs" />
+    <Compile Include="Assets\GenericBoard.cs" />
+    <Compile Include="Assets\Plot.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -111,14 +113,15 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
-    <None Include="Assets\Documentation\API.txt" />
+    <Compile Include="Assets\Wiiboard.cs" />
+    <None Include="Assets\All Scripts\SingleBoard\Documentation\API.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-    <None Include="Assets\Documentation\Scenes Number.txt" />
+    <None Include="Assets\All Scripts\SingleBoard\Documentation\Scenes Number.txt" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
@@ -127,7 +130,7 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
-    <None Include="Assets\Documentation\Readme.txt" />
+    <None Include="Assets\All Scripts\SingleBoard\Documentation\Readme.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
@@ -136,19 +139,19 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/College/ENGR90037_2020_SM1 Engineering Capstone Project Part 1/2D Games/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/College/Capstone-Project/2D-Games/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>D:/College/ENGR90037_2020_SM1 Engineering Capstone Project Part 1/2D Games/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>D:/College/Capstone-Project/2D-Games/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>D:/College/ENGR90037_2020_SM1 Engineering Capstone Project Part 1/2D Games/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>D:/College/Capstone-Project/2D-Games/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/College/ENGR90037_2020_SM1 Engineering Capstone Project Part 1/2D Games/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/College/Capstone-Project/2D-Games/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>D:/College/ENGR90037_2020_SM1 Engineering Capstone Project Part 1/2D Games/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>D:/College/Capstone-Project/2D-Games/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -352,7 +355,7 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>D:/College/ENGR90037_2020_SM1 Engineering Capstone Project Part 1/2D Games/Library/PackageCache/com.unity.analytics@3.2.3/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>D:/College/Capstone-Project/2D-Games/Library/PackageCache/com.unity.analytics@3.2.3/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -702,7 +705,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{EBAA81CB-1852-9A9A-8C97-CDB4E8FBE725}</Project>
+      <Project>{787A436D-E6B7-9160-1EFA-6C665FEAF995}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
   </ItemGroup>

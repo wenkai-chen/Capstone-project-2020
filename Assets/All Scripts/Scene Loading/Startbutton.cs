@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEditor;
@@ -11,19 +10,20 @@ public class Startbutton : MonoBehaviour
     // Start is called before the first frame update
     public void Trytostart()
    {
-        test.whetherstart=true;
+        GenericBoard.WhetherStart = true;
    }
 
     public void Trytostop()
     {
-        test.whetherstart = false;
+        GenericBoard.WhetherStart = false;
     }
 
-    public void geterror()
+    public void Geterror()
     {
-        test.calibration();
+        
+        // These value are used for calibriation
     }
-
+    
     public void GotoSavingPage()
     {
         SceneManager.LoadScene(5);

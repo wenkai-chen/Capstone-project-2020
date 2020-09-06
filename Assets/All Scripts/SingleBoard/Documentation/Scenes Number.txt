@@ -1,0 +1,7 @@
+0----MainMenu
+1----StandingSetting
+2----WeightshiftSetting
+3----SteppingSetting
+4----SingleBoardTest
+5----SavingPage
+6----doubleboard

@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{EBAA81CB-1852-9A9A-8C97-CDB4E8FBE725}</ProjectGuid>
+    <ProjectGuid>{787A436D-E6B7-9160-1EFA-6C665FEAF995}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
@@ -65,19 +65,19 @@
   <ItemGroup>
     <Compile Include="Assets\Plugins\Wii.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/College/ENGR90037_2020_SM1 Engineering Capstone Project Part 1/2D Games/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/College/Capstone-Project/2D-Games/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>D:/College/ENGR90037_2020_SM1 Engineering Capstone Project Part 1/2D Games/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>D:/College/Capstone-Project/2D-Games/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>D:/College/ENGR90037_2020_SM1 Engineering Capstone Project Part 1/2D Games/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>D:/College/Capstone-Project/2D-Games/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/College/ENGR90037_2020_SM1 Engineering Capstone Project Part 1/2D Games/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/College/Capstone-Project/2D-Games/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>D:/College/ENGR90037_2020_SM1 Engineering Capstone Project Part 1/2D Games/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>D:/College/Capstone-Project/2D-Games/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -281,7 +281,7 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>D:/College/ENGR90037_2020_SM1 Engineering Capstone Project Part 1/2D Games/Library/PackageCache/com.unity.analytics@3.2.3/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>D:/College/Capstone-Project/2D-Games/Library/PackageCache/com.unity.analytics@3.2.3/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
