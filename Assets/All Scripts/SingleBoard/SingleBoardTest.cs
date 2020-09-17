@@ -3,7 +3,7 @@
 using UnityEngine;
 using TMPro;
 
-public class SingleBoardTest : Wiiboard
+public class SingleBoardTest : Measurement
 {
     public GameObject SingleBoard_COPy;
     public GameObject SingleBoard_COPx;
@@ -33,17 +33,17 @@ public class SingleBoardTest : Wiiboard
     // Update is called once per frame
     void FixedUpdate()
     {
-        SingleBoard_Device_Number.GetComponent<TMP_Text>().text = GenericBoard.DeviceNumbers.ToString();
+        SingleBoard_Device_Number.GetComponent<TMP_Text>().text = Measurement.DeviceNumbers.ToString();
 
-        if (WhetherStart == true)
+        if (Measurement.WhetherStart == true)
         {
-            SingleBoard_COPy.GetComponent<TMP_Text>().text = GenericBoard.Board_COP[0].y.ToString("0.00");
-            SingleBoard_COPx.GetComponent<TMP_Text>().text = GenericBoard.Board_COP[0].x.ToString("0.00");
-            SingleBoard_COP_velocityx.GetComponent<TMP_Text>().text = GenericBoard.Velocity[0].x.ToString("0.00");
-            SingleBoard_COP_velocityy.GetComponent<TMP_Text>().text = GenericBoard.Velocity[0].y.ToString("0.00");
-            SingleBoard_COP_TotalForce.GetComponent<TMP_Text>().text = GenericBoard.Board_Totalforce[0].ToString("0.00");
+            SingleBoard_COPy.GetComponent<TMP_Text>().text = Measurement.Board0.Board_COP.y.ToString("0.00");
+            SingleBoard_COPx.GetComponent<TMP_Text>().text = Measurement.Board0.Board_COP.x.ToString("0.00");
+            SingleBoard_COP_velocityx.GetComponent<TMP_Text>().text = Velocityx.ToString("0.00");
+            SingleBoard_COP_velocityy.GetComponent<TMP_Text>().text = Velocityy.ToString("0.00");
+            SingleBoard_COP_TotalForce.GetComponent<TMP_Text>().text = Measurement.Board0.Board_Totalforce.ToString("0.00");
         }
-        else if (WhetherStart == false)
+        else if (Measurement.WhetherStart == false)
         {
             SingleBoard_COPy.GetComponent<TMP_Text>().text = 999.ToString("0.0");
             SingleBoard_COPx.GetComponent<TMP_Text>().text = 999.ToString("0.0");
@@ -54,3 +54,5 @@ public class SingleBoardTest : Wiiboard
         
     }
 }
+
+

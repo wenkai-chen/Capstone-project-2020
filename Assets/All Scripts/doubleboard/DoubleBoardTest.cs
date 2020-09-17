@@ -28,15 +28,15 @@ public class DoubleBoardTest : Wiiboard
     // Update is called once per frame
     void Update()
     {
-        DoubleBoard_Device_Number.GetComponent<TMP_Text>().text = GenericBoard.DeviceNumbers.ToString();
+        DoubleBoard_Device_Number.GetComponent<TMP_Text>().text = Measurement.DeviceNumbers.ToString();
 
         if (DoubleBoard_Startstatus == true)
         {
-            DoubleBoard_COPy.GetComponent<TMP_Text>().text = GenericBoard.Board_COP[0].y.ToString("0.00");
-            DoubleBoard_COPx.GetComponent<TMP_Text>().text = GenericBoard.Board_COP[0].x.ToString("0.00");
-            DoubleBoard_COP_velocityx.GetComponent<TMP_Text>().text = GenericBoard.Velocity[0].x.ToString("0.00");
-            DoubleBoard_COP_velocityy.GetComponent<TMP_Text>().text = GenericBoard.Velocity[0].y.ToString("0.00");
-            DoubleBoard_COP_TotalForce.GetComponent<TMP_Text>().text = GenericBoard.Board_Totalforce[0].ToString("0.00");
+            DoubleBoard_COPy.GetComponent<TMP_Text>().text = Board_COP.y.ToString("0.00");
+            DoubleBoard_COPx.GetComponent<TMP_Text>().text = Board_COP.x.ToString("0.00");
+            DoubleBoard_COP_velocityx.GetComponent<TMP_Text>().text = Measurement.Velocityx.ToString("0.00");
+            DoubleBoard_COP_velocityy.GetComponent<TMP_Text>().text = Measurement.Velocityy.ToString("0.00");
+            DoubleBoard_COP_TotalForce.GetComponent<TMP_Text>().text = Measurement.Board0.Board_Totalforce.ToString("0.00");
         }
     }
 }

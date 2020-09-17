@@ -66,7 +66,6 @@
     <Compile Include="Assets\All Scripts\BoardSizeSetting.cs" />
     <Compile Include="Assets\All Scripts\doubleboard\DoubleBoardTest.cs" />
     <Compile Include="Assets\All Scripts\doubleboard\Plot_2.cs" />
-    <Compile Include="Assets\All Scripts\GeneralBoard.cs" />
     <Compile Include="Assets\All Scripts\Scene Loading\MainMenu.cs" />
     <Compile Include="Assets\All Scripts\Scene Loading\SavingMenu.cs" />
     <Compile Include="Assets\All Scripts\Scene Loading\StandingSettingMenu.cs" />
@@ -79,6 +78,7 @@
     <Compile Include="Assets\All Scripts\test.cs" />
     <Compile Include="Assets\Demo Scene\DemoScene.cs" />
     <Compile Include="Assets\GenericBoard.cs" />
+    <Compile Include="Assets\Measurement.cs" />
     <Compile Include="Assets\Plot.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />

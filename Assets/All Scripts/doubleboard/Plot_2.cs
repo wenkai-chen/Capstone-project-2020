@@ -43,21 +43,8 @@ public class Plot_2 : MonoBehaviour
                + ((Board.Board_y[1] + 0.5f * Board.Board_length[1]) * (Board.Board_sensor[1].w + Board.Board_sensor[1].y)))
                / (Board.Board_Totalforce[0] + Board.Board_Totalforce[1]); */
 
-        theX = ((GenericBoard.Board_COPratio[0].y * GenericBoard.Board_Totalforce[0]) + ((GenericBoard.Board_COPratio[1].y + (GenericBoard.Board_x[1]) / GenericBoard.Board_width[1]) * GenericBoard.Board_Totalforce[1]))/ (GenericBoard.Board_Totalforce[0] + GenericBoard.Board_Totalforce[1]);
-
-        theY =( (-GenericBoard.Board_COPratio[0].x * GenericBoard.Board_Totalforce[0]) + (-GenericBoard.Board_COPratio[1].x * GenericBoard.Board_Totalforce[1])) / (GenericBoard.Board_Totalforce[0] + GenericBoard.Board_Totalforce[1]);
-        Debug.Log(GenericBoard.Board_COPratio[0]);
-        Debug.Log(GenericBoard.Board_COPratio[1]);
-        Debug.Log(GenericBoard.Board_Totalforce[0]);
-        Debug.Log(GenericBoard.Board_Totalforce[1]);
-        if (GenericBoard.WhetherStart==true)
-        {
-            GetComponent<RectTransform>().anchoredPosition = new Vector2(250f + theX * 150f, 325f + theY * 225f);
-        }
-        if (GenericBoard.WhetherStart == false)
-        {
-            GetComponent<RectTransform>().anchoredPosition = new Vector2(250f, 325f);
-        }
+       
+        
 
     }
 }

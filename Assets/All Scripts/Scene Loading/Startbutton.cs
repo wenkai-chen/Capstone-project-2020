@@ -10,12 +10,12 @@ public class Startbutton : MonoBehaviour
     // Start is called before the first frame update
     public void Trytostart()
    {
-        GenericBoard.WhetherStart = true;
+        Measurement.WhetherStart = true;
    }
 
     public void Trytostop()
     {
-        GenericBoard.WhetherStart = false;
+        Measurement.WhetherStart = false;
     }
 
     public void Geterror()

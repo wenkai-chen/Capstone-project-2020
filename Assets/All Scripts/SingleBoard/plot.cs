@@ -28,8 +28,7 @@ public class HumanImage : MonoBehaviour
         Wii.StartSearch();
        
        
-        human.GetComponent<RectTransform>().anchoredPosition = new Vector2(500 + 400 * GenericBoard.Board_COPratio[0].x, 300 + 200 * GenericBoard.Board_COPratio[0].y);
-        Debug.Log(GenericBoard.Board_COPratio[0].x);
+        human.GetComponent<RectTransform>().anchoredPosition = new Vector2(500 + 400 * Measurement.Board0.Board_COPratio.x, 300 + 200 * Measurement.Board0.Board_COPratio.y);
         /*if (Board.Board_Totalforce[0] < 5)
         {
             SingleBoardTest.Singleboard_Startstatus = false;
