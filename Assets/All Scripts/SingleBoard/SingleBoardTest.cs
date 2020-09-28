@@ -33,20 +33,20 @@ public class SingleBoardTest : Measurement
     // Update is called once per frame
     void FixedUpdate()
     {
-        SingleBoard_Device_Number.GetComponent<TMP_Text>().text = Measurement.DeviceNumbers.ToString();
+        SingleBoard_Device_Number.GetComponent<TMP_Text>().text = DeviceNumbers.ToString();
 
-        if (Measurement.WhetherStart == true)
+        if (WhetherStart == true)
         {
-            SingleBoard_COPy.GetComponent<TMP_Text>().text = Measurement.Board0.Board_COP.y.ToString("0.00");
-            SingleBoard_COPx.GetComponent<TMP_Text>().text = Measurement.Board0.Board_COP.x.ToString("0.00");
-            SingleBoard_COP_velocityx.GetComponent<TMP_Text>().text = Velocityx.ToString("0.00");
-            SingleBoard_COP_velocityy.GetComponent<TMP_Text>().text = Velocityy.ToString("0.00");
-            SingleBoard_COP_TotalForce.GetComponent<TMP_Text>().text = Measurement.Board0.Board_Totalforce.ToString("0.00");
+            SingleBoard_COPy.GetComponent<TMP_Text>().text = Board0.Board_COP.y.ToString("0.00");
+            SingleBoard_COPx.GetComponent<TMP_Text>().text = Board0.Board_COP.x.ToString("0.00");
+            SingleBoard_COP_velocityx.GetComponent<TMP_Text>().text = GlobalVelocity.x.ToString("0.00");
+            SingleBoard_COP_velocityy.GetComponent<TMP_Text>().text = GlobalVelocity.y.ToString("0.00");
+            SingleBoard_COP_TotalForce.GetComponent<TMP_Text>().text = Board0.Board_Totalforce.ToString("0.00");
         }
-        else if (Measurement.WhetherStart == false)
+        else if (WhetherStart == false)
         {
-            SingleBoard_COPy.GetComponent<TMP_Text>().text = 999.ToString("0.0");
-            SingleBoard_COPx.GetComponent<TMP_Text>().text = 999.ToString("0.0");
+            SingleBoard_COPy.GetComponent<TMP_Text>().text = 0.ToString("0.0");
+            SingleBoard_COPx.GetComponent<TMP_Text>().text = 0.ToString("0.0");
             SingleBoard_COP_velocityx.GetComponent<TMP_Text>().text = 999.ToString("0.0");
             SingleBoard_COP_velocityy.GetComponent<TMP_Text>().text = 999.ToString("0.0");
             SingleBoard_COP_TotalForce.GetComponent<TMP_Text>().text = 999.ToString("0.0");

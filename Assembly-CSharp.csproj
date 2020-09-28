@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\All Scripts\BoardSizeSetting.cs" />
+    <Compile Include="Assets\All Scripts\BoardsNumMenu.cs" />
     <Compile Include="Assets\All Scripts\doubleboard\DoubleBoardTest.cs" />
     <Compile Include="Assets\All Scripts\doubleboard\Plot_2.cs" />
     <Compile Include="Assets\All Scripts\Scene Loading\MainMenu.cs" />

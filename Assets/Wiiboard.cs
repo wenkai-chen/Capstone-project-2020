@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Wiiboard : GenericBoard
+public class Wiiboard : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -20,7 +20,7 @@ public class Wiiboard : GenericBoard
     {
         // Only Get Force Data and Device Number as Original Data
     }
-    public void WaketheBoard()
+    public static void WaketheBoard()
     {
         Debug.Log("Awake called.");
         Wii.StartSearch();

@@ -11,11 +11,14 @@ public class Startbutton : MonoBehaviour
     public void Trytostart()
    {
         Measurement.WhetherStart = true;
+        Debug.Log("start");
+
    }
 
     public void Trytostop()
     {
         Measurement.WhetherStart = false;
+        Debug.Log("stop");
     }
 
     public void Geterror()

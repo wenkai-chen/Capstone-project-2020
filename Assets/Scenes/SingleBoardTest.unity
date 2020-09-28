@@ -468,17 +468,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 789ba81f7f936db4f970ef94c65aa0b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connectednumbers: 0
-  forcex: 0
-  forcey: 0
-  forcez: 0
-  forcew: 0
-  forcex2: 0
-  forcey2: 0
-  forcez2: 0
-  forcew2: 0
-  Copdata: {x: 0, y: 0}
-  Copdata2: {x: 0, y: 0}
 --- !u!4 &183406525
 Transform:
   m_ObjectHideFlags: 0
@@ -917,6 +906,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50a3c5dbf5cfca249b18dd0a36ed3779, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Board_length: 0
+  Board_width: 0
+  BoardPosition: {x: 0, y: 0}
+  Board_Force: {x: 0, y: 0, z: 0, w: 0}
+  Board_Forcestorage: {x: 0, y: 0, z: 0, w: 0}
+  Board_Force_error_storage: {x: 0, y: 0, z: 0, w: 0}
+  Board_Totalforce: 0
+  RotationAngle: 0
+  Board_COPratio: {x: 0, y: 0}
+  Board_COPratioStorage: {x: 0, y: 0}
+  Board_COP: {x: 0, y: 0}
+  Board_COPStorage: {x: 0, y: 0}
+  BoardNumber: 0
+  SensorXRelative: {x: 0, y: 0}
+  SensorYRelative: {x: 0, y: 0}
+  SensorZRelative: {x: 0, y: 0}
+  SensorWRelative: {x: 0, y: 0}
+  SensorXinGlobal: {x: 0, y: 0}
+  SensorYinGlobal: {x: 0, y: 0}
+  SensorZinGlobal: {x: 0, y: 0}
+  SensorWinGlobal: {x: 0, y: 0}
+  Username: 
   SingleBoard_COPy: {fileID: 0}
   SingleBoard_COPx: {fileID: 0}
   SingleBoard_COP_velocityx: {fileID: 0}
@@ -1754,49 +1765,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 982562265}
   m_CullTransparentMesh: 0
---- !u!1 &1115778135
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1115778136}
-  - component: {fileID: 1115778137}
-  m_Layer: 0
-  m_Name: WiiBoard
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1115778136
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1115778135}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 191.9405, y: 150.50987, z: -5.110163}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1115778137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1115778135}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f025a4d59a0e0554fb632b96c34ddee4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1139384756
 GameObject:
   m_ObjectHideFlags: 0
@@ -2874,7 +2842,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400154, guid: 33e0ee18e5897493a8ab4d5e260f12f4, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 400154, guid: 33e0ee18e5897493a8ab4d5e260f12f4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3015,6 +2983,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1800524111}
   m_CullTransparentMesh: 0
+--- !u!1 &1808232156
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1808232157}
+  m_Layer: 0
+  m_Name: Combo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1808232157
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808232156}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1867393476}
+  - {fileID: 1936681844}
+  - {fileID: 1811204222}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1811204220
 GameObject:
   m_ObjectHideFlags: 0
@@ -3044,6 +3045,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81f58624962222d499382be211ebb601, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Board_length: 0
+  Board_width: 0
+  BoardPosition: {x: 0, y: 0}
+  Board_Force: {x: 0, y: 0, z: 0, w: 0}
+  Board_Forcestorage: {x: 0, y: 0, z: 0, w: 0}
+  Board_Force_error_storage: {x: 0, y: 0, z: 0, w: 0}
+  Board_Totalforce: 0
+  RotationAngle: 0
+  Board_COPratio: {x: 0, y: 0}
+  Board_COPratioStorage: {x: 0, y: 0}
+  Board_COP: {x: 0, y: 0}
+  Board_COPStorage: {x: 0, y: 0}
+  BoardNumber: 0
+  SensorXRelative: {x: 0, y: 0}
+  SensorYRelative: {x: 0, y: 0}
+  SensorZRelative: {x: 0, y: 0}
+  SensorWRelative: {x: 0, y: 0}
+  SensorXinGlobal: {x: 0, y: 0}
+  SensorYinGlobal: {x: 0, y: 0}
+  SensorZinGlobal: {x: 0, y: 0}
+  SensorWinGlobal: {x: 0, y: 0}
 --- !u!4 &1811204222
 Transform:
   m_ObjectHideFlags: 0
@@ -3051,12 +3073,120 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1811204220}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 217.93715, y: 35.315063, z: -2.2451897}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 1808232157}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1867393474
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1867393476}
+  - component: {fileID: 1867393475}
+  m_Layer: 0
+  m_Name: Measurement
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1867393475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867393474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 739fdf9aff7fbf048b94b7ccbdf2758e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Board_length: 430
+  Board_width: 260
+  BoardPosition: {x: 0, y: 0}
+  Board_Force: {x: 0, y: 0, z: 0, w: 0}
+  Board_Forcestorage: {x: 0, y: 0, z: 0, w: 0}
+  Board_Force_error_storage: {x: 0, y: 0, z: 0, w: 0}
+  Board_Totalforce: 0
+  RotationAngle: 0
+  Board_COPratio: {x: 0, y: 0}
+  Board_COPratioStorage: {x: 0, y: 0}
+  Board_COP: {x: 0, y: 0}
+  Board_COPStorage: {x: 0, y: 0}
+  BoardNumber: 0
+  SensorXRelative: {x: 0, y: 0}
+  SensorYRelative: {x: 0, y: 0}
+  SensorZRelative: {x: 0, y: 0}
+  SensorWRelative: {x: 0, y: 0}
+  SensorXinGlobal: {x: 0, y: 0}
+  SensorYinGlobal: {x: 0, y: 0}
+  SensorZinGlobal: {x: 0, y: 0}
+  SensorWinGlobal: {x: 0, y: 0}
+  Username: 
+--- !u!4 &1867393476
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867393474}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 120.44126, y: 85.8126, z: -0.3442191}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1808232157}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1936681842
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1936681844}
+  - component: {fileID: 1936681843}
+  m_Layer: 0
+  m_Name: Wiiboard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1936681843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936681842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f025a4d59a0e0554fb632b96c34ddee4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1936681844
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936681842}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1808232157}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1989689442
 GameObject:

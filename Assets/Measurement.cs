@@ -29,6 +29,8 @@ public class Measurement : GenericBoard
     // Start is called before the first frame update
     void Start()
     {
+        Wii.StartSearch();
+        Wii.WakeUp();
         Boards.Add(Board0);
         Boards.Add(Board1);
         Boards.Add(Board2);
@@ -37,6 +39,7 @@ public class Measurement : GenericBoard
         Board1.BoardNumber = 1;
         Board2.BoardNumber = 2;
         Board3.BoardNumber = 3;
+        updatetime=0.02F;
         foreach (GenericBoard item in Boards)
         {
             // Calculate Initial Sensor Position
@@ -62,10 +65,18 @@ public class Measurement : GenericBoard
         }
 
     }
+    void Awake()
+    {
+        Debug.Log("Awake called.");
+        Debug.Log("Awake called.");
+        Wii.StartSearch();
+        Wii.WakeUp();
 
+    }
     // Update is called once per frame
     void Update()
     {
+        DeviceNumbers = Wii.GetRemoteCount();
         foreach (GenericBoard item in Boards)
         {
             item.Board_Force = Wiiboard.Board_ForceRead(item.BoardNumber);
