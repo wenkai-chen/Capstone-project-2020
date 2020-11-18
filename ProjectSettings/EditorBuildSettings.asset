@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/doubleboard.unity
     guid: 19008183adc0b9349bfb6deab2e53d76
+  - enabled: 1
+    path: Assets/Scenes/Position&AngleSetting.unity
+    guid: 65f7790224200d04ea92376689ba7c1e
   m_configObjects: {}

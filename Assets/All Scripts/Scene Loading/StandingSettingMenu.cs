@@ -6,19 +6,28 @@ using UnityEngine.UI;
 
 public class StandingSettingMenu : MonoBehaviour
 {
-    
+    public InputField IDNumber;
 
     public void BacktoMainMenu()
     {
         SceneManager.LoadScene(0);
     }
 
-    public void GoStandingAssessment()
+    public void GoPositionAngleSetting()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(7);
+    }
+
+    void Update()
+    {
+        IDNumber.onValueChanged.AddListener(delegate
+        {
+
+            PlayerPrefs.SetString("UserName", IDNumber.GetComponent<InputField>().text);
+
+        });
     }
 
 
 
-    
 }

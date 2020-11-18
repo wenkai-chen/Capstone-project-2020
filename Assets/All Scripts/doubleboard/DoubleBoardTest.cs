@@ -3,7 +3,7 @@
 using UnityEngine;
 using TMPro;
 
-public class DoubleBoardTest : Wiiboard
+public class DoubleBoardTest : Measurement
 {
     public GameObject DoubleBoard_COPy;
     public GameObject DoubleBoard_COPx;
@@ -28,8 +28,28 @@ public class DoubleBoardTest : Wiiboard
     // Update is called once per frame
     void Update()
     {
-        DoubleBoard_Device_Number.GetComponent<TMP_Text>().text = Measurement.DeviceNumbers.ToString();
+        DoubleBoard_Device_Number.GetComponent<TMP_Text>().text = Measurement.DeviceNumbers.ToString(); 
+    }
+    void FixedUpdate()
+    {
+        DoubleBoard_Device_Number.GetComponent<TMP_Text>().text = DeviceNumbers.ToString();
 
-       
+        if (WhetherStart == true)
+        {
+            DoubleBoard_COPy.GetComponent<TMP_Text>().text = GlobalCOP.y.ToString("0.00");
+            DoubleBoard_COPx.GetComponent<TMP_Text>().text = GlobalCOP.x.ToString("0.00");
+            DoubleBoard_COP_velocityx.GetComponent<TMP_Text>().text = GlobalVelocity.x.ToString("0.00");
+            DoubleBoard_COP_velocityy.GetComponent<TMP_Text>().text = GlobalVelocity.y.ToString("0.00");
+            DoubleBoard_COP_TotalForce.GetComponent<TMP_Text>().text = GlobalTotalForce.ToString("0.00");
+        }
+        else if (WhetherStart == false)
+        {
+            DoubleBoard_COPy.GetComponent<TMP_Text>().text = 0.ToString("0.0");
+            DoubleBoard_COPx.GetComponent<TMP_Text>().text = 0.ToString("0.0");
+            DoubleBoard_COP_velocityx.GetComponent<TMP_Text>().text = 999.ToString("0.0");
+            DoubleBoard_COP_velocityy.GetComponent<TMP_Text>().text = 999.ToString("0.0");
+            DoubleBoard_COP_TotalForce.GetComponent<TMP_Text>().text = 999.ToString("0.0");
+        }
+
     }
 }

@@ -27,8 +27,12 @@ public class BoardSizeSetting: MonoBehaviour
         {
             inputLength.readOnly = true;
             inputWidth.readOnly = true;
-            inputLength.text = "100";
-            inputWidth.text = "80";
+            inputLength.text = "433";
+            inputWidth.text = "238";
+            PlayerPrefs.SetFloat("Board_Width", 238);
+            PlayerPrefs.SetFloat("Board_Length", 433);
+            
+            PlayerPrefs.SetFloat("DeltaTime", 0.02f);
         }
         else if (BoardTypeString == "Fourier Board")
         {
@@ -46,32 +50,22 @@ public class BoardSizeSetting: MonoBehaviour
 
         inputLength.onValueChanged.AddListener(delegate
         {
-            Measurement.Board0.Board_length = float.Parse(inputLength.GetComponent<InputField>().text);
-            Measurement.Board1.Board_length = float.Parse(inputLength.GetComponent<InputField>().text);
-            Measurement.Board2.Board_length = float.Parse(inputLength.GetComponent<InputField>().text);
-            Measurement.Board3.Board_length = float.Parse(inputLength.GetComponent<InputField>().text);
+
+            PlayerPrefs.SetFloat("Board_Length", float.Parse(inputLength.GetComponent<InputField>().text));
+
         });
         inputWidth.onValueChanged.AddListener(delegate
         {
-            Measurement.Board0.Board_width = float.Parse(inputLength.GetComponent<InputField>().text);
-            Measurement.Board1.Board_width = float.Parse(inputLength.GetComponent<InputField>().text);
-            Measurement.Board2.Board_width = float.Parse(inputLength.GetComponent<InputField>().text);
-            Measurement.Board3.Board_width = float.Parse(inputLength.GetComponent<InputField>().text);
+            PlayerPrefs.SetFloat("Board_Width", float.Parse(inputWidth.GetComponent<InputField>().text));
         });
 
         inputLength.onEndEdit.AddListener(delegate
         {
-            Measurement.Board0.Board_length = float.Parse(inputLength.GetComponent<InputField>().text);
-            Measurement.Board1.Board_length = float.Parse(inputLength.GetComponent<InputField>().text);
-            Measurement.Board2.Board_length = float.Parse(inputLength.GetComponent<InputField>().text);
-            Measurement.Board3.Board_length = float.Parse(inputLength.GetComponent<InputField>().text);
+            PlayerPrefs.SetFloat("Board_Length", float.Parse(inputLength.GetComponent<InputField>().text));
         });
         inputWidth.onEndEdit.AddListener(delegate
         {
-            Measurement.Board0.Board_width = float.Parse(inputLength.GetComponent<InputField>().text);
-            Measurement.Board1.Board_width = float.Parse(inputLength.GetComponent<InputField>().text);
-            Measurement.Board2.Board_width = float.Parse(inputLength.GetComponent<InputField>().text);
-            Measurement.Board3.Board_width = float.Parse(inputLength.GetComponent<InputField>().text);
+            PlayerPrefs.SetFloat("Board_Width", float.Parse(inputWidth.GetComponent<InputField>().text));
         });
 
         

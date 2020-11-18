@@ -37,22 +37,24 @@ public class SingleBoardTest : Measurement
 
         if (WhetherStart == true)
         {
-            SingleBoard_COPy.GetComponent<TMP_Text>().text = Board0.Board_COP.y.ToString("0.00");
-            SingleBoard_COPx.GetComponent<TMP_Text>().text = Board0.Board_COP.x.ToString("0.00");
+            
+            SingleBoard_COPx.GetComponent<TMP_Text>().text = GlobalCOPStorage.x.ToString("0.00");
+            SingleBoard_COPy.GetComponent<TMP_Text>().text = GlobalCOPStorage.y.ToString("0.00");
             SingleBoard_COP_velocityx.GetComponent<TMP_Text>().text = GlobalVelocity.x.ToString("0.00");
             SingleBoard_COP_velocityy.GetComponent<TMP_Text>().text = GlobalVelocity.y.ToString("0.00");
-            SingleBoard_COP_TotalForce.GetComponent<TMP_Text>().text = Board0.Board_Totalforce.ToString("0.00");
+            SingleBoard_COP_TotalForce.GetComponent<TMP_Text>().text = GlobalTotalForce.ToString("0.00");
         }
         else if (WhetherStart == false)
         {
-            SingleBoard_COPy.GetComponent<TMP_Text>().text = 0.ToString("0.0");
-            SingleBoard_COPx.GetComponent<TMP_Text>().text = 0.ToString("0.0");
+            SingleBoard_COPy.GetComponent<TMP_Text>().text = 999.ToString("0.0");
+            SingleBoard_COPx.GetComponent<TMP_Text>().text = 999.ToString("0.0");
             SingleBoard_COP_velocityx.GetComponent<TMP_Text>().text = 999.ToString("0.0");
             SingleBoard_COP_velocityy.GetComponent<TMP_Text>().text = 999.ToString("0.0");
             SingleBoard_COP_TotalForce.GetComponent<TMP_Text>().text = 999.ToString("0.0");
         }
         
     }
+
 }
 
 

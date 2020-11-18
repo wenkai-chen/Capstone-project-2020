@@ -65,8 +65,12 @@
   <ItemGroup>
     <Compile Include="Assets\All Scripts\BoardSizeSetting.cs" />
     <Compile Include="Assets\All Scripts\BoardsNumMenu.cs" />
+    <Compile Include="Assets\All Scripts\DataSaving.cs" />
     <Compile Include="Assets\All Scripts\doubleboard\DoubleBoardTest.cs" />
     <Compile Include="Assets\All Scripts\doubleboard\Plot_2.cs" />
+    <Compile Include="Assets\All Scripts\GenericBoard.cs" />
+    <Compile Include="Assets\All Scripts\Measurement.cs" />
+    <Compile Include="Assets\All Scripts\PositionAngleSetting.cs" />
     <Compile Include="Assets\All Scripts\Scene Loading\MainMenu.cs" />
     <Compile Include="Assets\All Scripts\Scene Loading\SavingMenu.cs" />
     <Compile Include="Assets\All Scripts\Scene Loading\StandingSettingMenu.cs" />
@@ -76,11 +80,9 @@
     <Compile Include="Assets\All Scripts\SingleBoard\Documentation\documents.cs" />
     <Compile Include="Assets\All Scripts\SingleBoard\Plot.cs" />
     <Compile Include="Assets\All Scripts\SingleBoard\SingleBoardTest.cs" />
-    <Compile Include="Assets\All Scripts\test.cs" />
+    <Compile Include="Assets\All Scripts\Wiiboard.cs" />
     <Compile Include="Assets\Demo Scene\DemoScene.cs" />
-    <Compile Include="Assets\GenericBoard.cs" />
-    <Compile Include="Assets\Measurement.cs" />
-    <Compile Include="Assets\Plot.cs" />
+    <Compile Include="Assets\HumanControl.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -114,7 +116,6 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
-    <Compile Include="Assets\Wiiboard.cs" />
     <None Include="Assets\All Scripts\SingleBoard\Documentation\API.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />

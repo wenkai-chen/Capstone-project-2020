@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/StandingSetting.unity
+- path: Assets/Scenes/Position&AngleSetting.unity
   isLoaded: 1
   isActive: 1
